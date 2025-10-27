@@ -3,8 +3,5 @@
 pkgs.mkShell {
   packages = with pkgs; [
     uv
-    (python3.withPackages(pypkgs: with pypkgs; [
-      black
-    ]))
   ];
 }
