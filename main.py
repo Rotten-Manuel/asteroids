@@ -30,16 +30,20 @@ def main():
                 running = False
 
         updatable.update(dt)
+
         for object in asteroids:
             if player.collide(object):
-                print("Game Over")
+                print("Game over!")
                 running = False
+
         screen.fill((0,0,0))
+
         for entity in drawable:
             entity.draw(screen)
+
         pygame.display.flip()
 
-        # shit is happening  here
+        # it has to do with the framerate
         dt = clock.tick(60) / 1000
 
     return
