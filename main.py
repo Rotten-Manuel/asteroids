@@ -34,10 +34,16 @@ def main():
 
         updatable.update(dt)
 
-        for object in asteroids:
-            if player.collide(object):
+        for entity in asteroids:
+            if player.collide(entity):
                 print("Game over!")
                 running = False
+
+        for entity in asteroids:
+            for bullet in proyectiles:
+                if bullet.collide(entity):
+                    bullet.kill()
+                    entity.kill()
 
         screen.fill((0,0,0))
 
