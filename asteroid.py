@@ -16,11 +16,14 @@ class Asteroid(CircleShape):
             return
         velocity1 = self.velocity.rotate(random.uniform(20.0, 50.0))
         velocity2 = self.velocity.rotate(random.uniform(20.0, 50.0))
+
         new_radius = self.radius - ASTEROID_MIN_RADIUS
-        asteroid1 = Asteroid(self.position.x, self.position.y, new_radius)
-        asteroid1.velocity = velocity1 * 1.2
-        asteroid2 = Asteroid(self.position.x, self.position.y, new_radius)
-        asteroid2.velocity = velocity2 * 1.2
+
+        asteroid = Asteroid(self.position.x, self.position.y, new_radius)
+        asteroid.velocity = velocity1 * 1.2
+
+        asteroid = Asteroid(self.position.x, self.position.y, new_radius)
+        asteroid.velocity = velocity2 * 1.2
         
 
     def update(self, dt):

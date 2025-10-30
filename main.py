@@ -43,7 +43,7 @@ def main():
             for bullet in proyectiles:
                 if bullet.collide(entity):
                     bullet.kill()
-                    entity.kill()
+                    entity.split()
 
         screen.fill((0,0,0))
 
