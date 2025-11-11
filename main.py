@@ -5,6 +5,15 @@ from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
 
+def main_menu():
+    while True:
+        screen.fill(0,0,0)
+
+
+        pygame.display.flip()
+
+    return
+
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
